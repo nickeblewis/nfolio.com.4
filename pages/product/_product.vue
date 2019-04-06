@@ -16,7 +16,7 @@
               :data-item-id="product._id"
               type="button"
               class="snipcart-add-item"
-              data-item-url="/"
+              :data-item-url="generateUrl"
             >
               Add to cart
             </button>
@@ -62,6 +62,9 @@ export default {
     }
   },
   computed: {
+    generateUrl: function() {
+      return 'https://boring-kowalevski-f16c88.netlify.com/product/rooftops-of-rome'
+    },
     formattedPrice: function() {
       return numeral(this.product.defaultProductVariant.price).format('$0.00')
     },
