@@ -12,7 +12,7 @@
             <div class="price">{{ formattedPrice }}</div>
             <button
               :data-item-name="product.title"
-              :data-item-price="product.defaultProductVariant.price"
+              data-item-price="45.00"
               :data-item-id="product._id"
               type="button"
               class="snipcart-add-item"
@@ -62,7 +62,10 @@ export default {
   },
   computed: {
     generateUrl: function() {
-      return 'https://boring-kowalevski-f16c88.netlify.com/product/rooftops-of-rome'
+      return (
+        'https://boring-kowalevski-f16c88.netlify.com/' +
+        this.product.slug.current
+      )
     },
     formattedPrice: function() {
       return numeral(this.product.defaultProductVariant.price).format('$0.00')
