@@ -63,7 +63,7 @@ export default {
   computed: {
     generateUrl: function() {
       return (
-        'https://boring-kowalevski-f16c88.netlify.com/' +
+        'https://boring-kowalevski-f16c88.netlify.com/product/' +
         this.product.slug.current
       )
     },
