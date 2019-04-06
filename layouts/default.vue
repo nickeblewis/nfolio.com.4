@@ -1,9 +1,9 @@
 <template>
   <div class="root">
     <div class="container">
-      <div class="is-hidden-mobile civocy">
+      <div class="civocy">
         <div class="columns">
-          <div class="column">
+          <div class="column is-hidden-mobile">
             <section class="level socialIcons">
               <div class="level-item">
                 <a
@@ -84,7 +84,32 @@
               <img src="/nfolio.png" alt="Nfolio logo" />
             </a>
           </div>
-          <div class="column has-text-right has-text-weight-semibold">
+          <div
+            class="column has-text-right has-text-weight-semibold is-hidden-mobile"
+          >
+            <p>
+              <a to="mailto:info@nfolio.com" href="mailto:info@nfolio.com"
+                >info@nfolio.com</a
+              >
+              |
+              <a to="tel:+44 (0)1252 757213" href="tel:+44 (0)1252 757213"
+                >+44 (0)1252 757213</a
+              >
+            </p>
+
+            <div ref="cart" class="cart">
+              <a href="#" class="snipcart-checkout">
+                <div class="snipcart-summary">
+                  🛒
+                  <span class="snipcart-total-items" /> items
+                  <span class="snipcart-total-price" />
+                </div>
+              </a>
+            </div>
+          </div>
+          <div
+            class="column has-text-centered has-text-weight-semibold is-hidden-widescreen"
+          >
             <p>
               <a to="mailto:info@nfolio.com" href="mailto:info@nfolio.com"
                 >info@nfolio.com</a
@@ -107,7 +132,7 @@
           </div>
         </div>
         <nav
-          class="navbar has-background-white-ter"
+          class="navbar has-background-white-ter is-hidden-mobile"
           role="navigation"
           aria-label="main navigation"
         >
@@ -129,7 +154,7 @@
         </nav>
       </div>
       <div class="columns dIlvFm">
-        <div class="column is-one-fifth">
+        <div class="column is-one-fifth is-hidden-mobile">
           <aside class="menu">
             <h4
               class="is-size-4 has-text-centered is-uppercase has-text-weight-bold"
@@ -143,9 +168,9 @@
                 :key="category._id"
                 class="menu-label"
               >
-                <router-link :to="'/category/' + category.slug.current">
-                  {{ category.title }}
-                </router-link>
+                <router-link :to="'/category/' + category.slug.current">{{
+                  category.title
+                }}</router-link>
                 <ul v-if="category.children" class="sub-categories">
                   <li
                     v-for="subCategory in category.children"
