@@ -191,7 +191,7 @@
         <nuxt />
         <!-- </section> -->
       </div>
-      <section class="section sc-bZQynM iMWVsx">
+      <!--<section class="section sc-bZQynM iMWVsx">
         <h4
           class="is-size-4 has-text-centered is-uppercase has-text-weight-bold"
         >
@@ -207,7 +207,7 @@
             details over via email (old skool I know!!!)
           </p>
         </div>
-      </section>
+      </section>-->
     </div>
     <footer class="sc-iwsKbI gApMHF">
       <div class="section container is-hidden-mobile">
