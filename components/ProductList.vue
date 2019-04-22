@@ -7,12 +7,9 @@
         class="column is-one-third"
       >
         <div class="card">
-          <div class="card-image">
-            <figure class="image is-4by3">
-              <router-link
-                :to="'/product/' + product.slug.current"
-                class="link"
-              >
+          <router-link :to="'/product/' + product.slug.current" class="link">
+            <div class="card-image">
+              <figure class="image is-4by3">
                 <SanityImage
                   v-if="product.defaultProductVariant.images[0]"
                   :image="product.defaultProductVariant.images[0]"
@@ -20,11 +17,10 @@
                   :width="displayView === 'grid' ? 300 : 50"
                   class="image"
                 />
-              </router-link>
-            </figure>
-          </div>
-          <div class="card-content">
-            <!-- <div class="media">
+              </figure>
+            </div>
+            <div class="card-content">
+              <!-- <div class="media">
               <div class="media-left">
                 <figure class="image is-48x48">
                   <img
@@ -37,13 +33,15 @@
                 <p class="title is-4">{{ product.vendor.title }}</p>
                 <p class="subtitle is-6">@johnsmith</p>
               </div>
-            </div>-->
+              </div>-->
 
-            <div class="content">
-              <h4>{{ product.title }}</h4>
-              <p>{{ product.blurb }}</p>
+              <div class="content">
+                <h4>{{ product.title }}</h4>
+                <!--<p>{{ product.blurb }}</p>-->
+                <p>from £40</p>
+              </div>
             </div>
-          </div>
+          </router-link>
         </div>
 
         <!-- <router-link :to="'/product/' + product.slug.current" class="link">

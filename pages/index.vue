@@ -22,7 +22,7 @@ import ProductList from '~/components/ProductList'
 
 const query = `
   {
-    "products": *[_type == "product"]
+    "products": *[_type == "product"] | order(_createdAt desc)
   }
 `
 
