@@ -18,7 +18,7 @@
           <div class="price-and-button">
             <button
               :data-item-name="product.title"
-              data-item-price="45.00"
+              data-item-price="40.00"
               :data-item-id="'01A4' + product.defaultProductVariant.sku"
               type="button"
               class="snipcart-add-item"
@@ -31,7 +31,7 @@
           <div class="price-and-button">
             <button
               :data-item-name="product.title"
-              data-item-price="85.00"
+              data-item-price="50.00"
               :data-item-id="'01A3' + product.defaultProductVariant.sku"
               type="button"
               class="snipcart-add-item"
@@ -44,7 +44,7 @@
           <div class="price-and-button">
             <button
               :data-item-name="product.title"
-              data-item-price="125.00"
+              data-item-price="65.00"
               :data-item-id="'01A2' + product.defaultProductVariant.sku"
               type="button"
               class="snipcart-add-item"
