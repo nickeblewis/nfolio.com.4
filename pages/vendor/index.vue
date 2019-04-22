@@ -2,7 +2,7 @@
   <section>
     <div>
       <h4 class="is-size-4 has-text-centered is-uppercase has-text-weight-bold">
-        Vendors
+        Photographers
       </h4>
       <div class="sc-htpNat QGUha"></div>
 

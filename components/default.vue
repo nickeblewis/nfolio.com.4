@@ -13,7 +13,7 @@
             <router-link :to="'/category'">Categories</router-link>
           </li>
           <li>
-            <router-link :to="'/vendor'">Vendors</router-link>
+            <router-link :to="'/photographer'">Photographers</router-link>
           </li>
         </ul>
       </nav>
@@ -35,17 +35,17 @@
           :key="category._id"
           class="category"
         >
-          <router-link :to="'/category/' + category.slug.current">
-            {{ category.title }}
-          </router-link>
+          <router-link :to="'/category/' + category.slug.current">{{
+            category.title
+          }}</router-link>
           <ul v-if="category.children" class="sub-categories">
             <li
               v-for="subCategory in category.children"
               :key="category._id + subCategory._id"
             >
-              <router-link :to="'/category/' + subCategory.slug.current">
-                {{ subCategory.title }}
-              </router-link>
+              <router-link :to="'/category/' + subCategory.slug.current">{{
+                subCategory.title
+              }}</router-link>
             </li>
           </ul>
         </li>

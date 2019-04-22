@@ -144,7 +144,7 @@
               >Categories</router-link
             >
             <router-link class="navbar-item is-hoverable" :to="'/vendor'"
-              >Vendors</router-link
+              >Photographers</router-link
             >
             <!--<a class="navbar-item" href="/coupons">Coupons</a>
           <a class="navbar-item" href="/blog">Blog</a>
@@ -168,9 +168,9 @@
                 :key="category._id"
                 class="menu-label"
               >
-                <router-link :to="'/category/' + category.slug.current">{{
-                  category.title
-                }}</router-link>
+                <router-link :to="'/category/' + category.slug.current">
+                  {{ category.title }}
+                </router-link>
                 <ul v-if="category.children" class="sub-categories">
                   <li
                     v-for="subCategory in category.children"
