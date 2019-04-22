@@ -26,7 +26,7 @@
             >
               Add to cart
             </button>
-            <div class="price">A4 / £45.00</div>
+            <div class="price">A4 / £40</div>
           </div>
           <div class="price-and-button">
             <button
@@ -39,7 +39,7 @@
             >
               Add to cart
             </button>
-            <div class="price">A3 / £85.00</div>
+            <div class="price">A3 / £50</div>
           </div>
           <div class="price-and-button">
             <button
@@ -52,7 +52,7 @@
             >
               Add to cart
             </button>
-            <div class="price">A2 / £125.00</div>
+            <div class="price">A2 / £65</div>
           </div>
         </div>
         <div>
