@@ -12,7 +12,7 @@
             <div class="price">£45.00</div>
             <button
               :data-item-name="product.title"
-              data-item-price="45.00"
+              data-item-price="5.00"
               :data-item-id="product._id"
               type="button"
               class="snipcart-add-item"
