@@ -7,21 +7,6 @@
     <div class="columns">
       <div class="column">
         <p v-if="product.blurb" class="blurb">{{ product.blurb }}</p>
-        <div class="sub-head">
-          <div class="price-and-button">
-            <div class="price">£45.00</div>
-            <button
-              :data-item-name="product.title"
-              data-item-price="45.00"
-              :data-item-id="product._id"
-              type="button"
-              class="snipcart-add-item"
-              :data-item-url="generateUrl"
-            >
-              Add to cart
-            </button>
-          </div>
-        </div>
         <div class="body" v-html="bodyHtml" />
       </div>
       <div class="sidebar column">
@@ -29,6 +14,50 @@
           :images="product.defaultProductVariant.images"
           class="image-viewer"
         />
+        <div class="sub-head">
+          <div class="price-and-button">
+            <button
+              :data-item-name="product.title"
+              data-item-price="45.00"
+              :data-item-id="'01A4' + product.defaultProductVariant.sku"
+              type="button"
+              class="snipcart-add-item"
+              :data-item-url="generateUrl"
+            >
+              Add to cart
+            </button>
+            <div class="price">A4 / £45.00</div>
+          </div>
+          <div class="price-and-button">
+            <button
+              :data-item-name="product.title"
+              data-item-price="85.00"
+              :data-item-id="'01A3' + product.defaultProductVariant.sku"
+              type="button"
+              class="snipcart-add-item"
+              :data-item-url="generateUrl"
+            >
+              Add to cart
+            </button>
+            <div class="price">A3 / £85.00</div>
+          </div>
+          <div class="price-and-button">
+            <button
+              :data-item-name="product.title"
+              data-item-price="125.00"
+              :data-item-id="'01A2' + product.defaultProductVariant.sku"
+              type="button"
+              class="snipcart-add-item"
+              :data-item-url="generateUrl"
+            >
+              Add to cart
+            </button>
+            <div class="price">A2 / £125.00</div>
+          </div>
+        </div>
+        <div>
+          All prints are produced on high quality acid-free photographic paper
+        </div>
       </div>
     </div>
   </section>
@@ -61,6 +90,9 @@ export default {
     }
   },
   computed: {
+    productSKU: function(prefix) {
+      return prefix + this.product._id
+    },
     generateUrl: function() {
       return 'https://nfolio.com/product/' + this.product.slug.current
     },
@@ -111,7 +143,7 @@ export default {
 @media only screen and (min-width: 500px) {
   .price {
     display: block;
-    font-size: 5em;
+    font-size: 2em;
     margin-right: 2rem;
   }
 
@@ -166,10 +198,10 @@ export default {
 
 .snipcart-add-item {
   border: none;
-  color: #000;
-  background-color: #fff;
+  color: #fff;
+  background-color: rgb(73, 219, 129);
   border: 2px solid #000;
-  padding: 1em;
+  padding: 0.5em;
   font-size: 1.2em;
   margin-right: 1em;
   outline: none;
