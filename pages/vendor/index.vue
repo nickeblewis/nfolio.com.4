@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section class="container container-padding">
     <div>
       <h4 class="is-size-4 has-text-centered is-uppercase has-text-weight-bold">
         Photographers
@@ -45,6 +45,9 @@ export default {
 </script>
 
 <style scoped>
+.container-padding {
+  padding: 12px;
+}
 .vendors {
   display: grid;
   margin: 0;

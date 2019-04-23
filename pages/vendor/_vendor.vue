@@ -1,5 +1,5 @@
 <template>
-  <section class="container">
+  <section class="container container-padding">
     <h4 class="is-size-4 has-text-centered is-uppercase has-text-weight-bold">
       {{ title }}
     </h4>
@@ -55,3 +55,9 @@ export default {
   }
 }
 </script>
+
+<style>
+.container-padding {
+  padding: 12px;
+}
+</style>

@@ -1,5 +1,5 @@
 <template>
-  <section :key="category.id" class="container">
+  <section :key="category.id" class="container container-padding">
     <div>
       <h4 class="is-size-4 has-text-centered is-uppercase has-text-weight-bold">
         {{ category.title }}
@@ -13,9 +13,9 @@
           :key="subCat._id"
           class="column is-one-quarter"
         >
-          <router-link :to="'/category/' + subCat.slug.current">{{
-            subCat.title
-          }}</router-link>
+          <router-link :to="'/category/' + subCat.slug.current">
+            {{ subCat.title }}
+          </router-link>
         </li>
       </ul>
     </div>
@@ -59,6 +59,10 @@ export default {
 </script>
 
 <style scoped>
+.container-padding {
+  padding: 12px;
+}
+
 .sub-categories {
   display: grid;
   grid-template-columns: repeat(2, 1fr);

@@ -1,8 +1,8 @@
 <template>
   <div class="root">
     <div class="container">
-      <div class="civocy">
-        <div class="columns">
+      <div class="civocy is-fixed-top">
+        <div class="columns is-fixed-top">
           <div class="column is-hidden-mobile">
             <section class="level socialIcons">
               <div class="level-item">
@@ -168,9 +168,9 @@
                 :key="category._id"
                 class="menu-label"
               >
-                <router-link :to="'/category/' + category.slug.current">
-                  {{ category.title }}
-                </router-link>
+                <router-link :to="'/category/' + category.slug.current">{{
+                  category.title
+                }}</router-link>
                 <ul v-if="category.children" class="sub-categories">
                   <li
                     v-for="subCategory in category.children"
@@ -503,5 +503,8 @@ body {
 }
 .cttAZQ {
   margin-bottom: 1rem;
+}
+.category .nuxt-link-active {
+  font-weight: 700;
 }
 </style>

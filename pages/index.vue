@@ -1,5 +1,5 @@
 <template>
-  <section class="container">
+  <section class="container container-padding">
     <div>
       <div v-show="products">
         <h4
@@ -22,7 +22,7 @@ import ProductList from '~/components/ProductList'
 
 const query = `
   {
-    "products": *[_type == "product"] | order(_createdAt desc)[0..5]
+    "products": *[_type == "product"] | order(_createdAt desc)[0..11]
   }
 `
 
@@ -36,4 +36,8 @@ export default {
 }
 </script>
 
-<style></style>
+<style>
+.container-padding {
+  padding: 12px;
+}
+</style>

@@ -14,7 +14,7 @@
                   v-if="product.defaultProductVariant.images[0]"
                   :image="product.defaultProductVariant.images[0]"
                   :alt="product.title"
-                  :width="displayView === 'grid' ? 300 : 50"
+                  :width="274"
                   class="image"
                 />
               </figure>

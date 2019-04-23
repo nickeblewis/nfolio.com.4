@@ -19,13 +19,13 @@ export default {
       default: 'Missing caption'
     },
     width: {
-      default: 100,
+      default: 274,
       type: Number
     }
   },
   computed: {
     imageUrl: function() {
-      return builder.image(this.image).width(this.width)
+      return builder.image(this.image).width(900)
     }
   }
 }

@@ -4,16 +4,17 @@
       {{ product.title }}
     </h4>
     <div class="sc-htpNat QGUha"></div>
+    <ImageViewer
+      :images="product.defaultProductVariant.images"
+      class="image-viewer"
+    />
+
     <div class="columns">
       <div class="column">
         <p v-if="product.blurb" class="blurb">{{ product.blurb }}</p>
         <div class="body" v-html="bodyHtml" />
       </div>
       <div class="sidebar column">
-        <ImageViewer
-          :images="product.defaultProductVariant.images"
-          class="image-viewer"
-        />
         <div class="sub-head">
           <div class="price-and-button">
             <button
@@ -152,13 +153,13 @@ export default {
   }
 
   .image-viewer {
-    min-width: 25vw;
-    max-width: 20rem;
+    min-width: 60vw;
+    max-width: 60rem;
+    align-content: center;
   }
 
   .sidebar {
-    margin-right: 1em;
-    margin-bottom: 1em;
+    margin: 1em 0;
   }
 }
 
