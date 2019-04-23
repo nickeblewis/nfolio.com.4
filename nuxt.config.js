@@ -80,9 +80,13 @@ export default {
   modules: [
     // Doc:https://github.com/nuxt-community/modules/tree/master/packages/bulma
     '@nuxtjs/bulma',
-    '@nuxtjs/pwa'
+    '@nuxtjs/pwa',
+    '@nuxtjs/google-analytics'
   ],
 
+  googleAnalytics: {
+    id: 'UA-58917338-2'
+  },
   /*
    ** Build configuration
    */
