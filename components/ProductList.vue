@@ -38,7 +38,7 @@
               <div class="content">
                 <h4>{{ product.title }}</h4>
                 <!--<p>{{ product.blurb }}</p>-->
-                <p>prints from £40-£65</p>
+                <!--<p>prints from £40-£65</p>-->
               </div>
             </div>
           </router-link>
