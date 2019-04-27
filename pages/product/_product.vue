@@ -14,7 +14,7 @@
         <p v-if="product.blurb" class="blurb">{{ product.blurb }}</p>
         <div class="body" v-html="bodyHtml" />
       </div>
-      <div class="sidebar column">
+      <div v-if="product.defaultProductVariant.price" class="sidebar column">
         <div class="sub-head">
           <div class="price-and-button">
             <button
