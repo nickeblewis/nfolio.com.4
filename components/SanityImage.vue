@@ -25,7 +25,7 @@ export default {
   },
   computed: {
     imageUrl: function() {
-      return builder.image(this.image).width(900)
+      return builder.image(this.image).width(800)
     }
   }
 }
