@@ -1,4 +1,5 @@
 <template>
+  <!-- prettier-ignore -->
   <div class="root">
     <div class="container">
       <div class="civocy is-fixed-top">
@@ -81,51 +82,53 @@
           </div>
           <div class="column has-text-centered">
             <a href="/">
-              <img src="/nfolio.png" alt="Nfolio logo" />
+              <img src="/nfolio.png" alt="Nfolio logo">
             </a>
           </div>
-          <div
-            class="column has-text-right has-text-weight-semibold is-hidden-mobile"
-          >
+          <!-- prettier-ignore -->
+          <div class="column has-text-right has-text-weight-semibold is-hidden-mobile">
             <p>
-              <a to="mailto:info@nfolio.com" href="mailto:info@nfolio.com"
-                >info@nfolio.com</a
-              >
+              <a
+                to="mailto:nick.lewis@nfolio.com"
+                href="mailto:nick.lewis@nfolio.com"
+              >nick.lewis@nfolio.com</a>
               |
-              <a to="tel:+44 (0)1252 757213" href="tel:+44 (0)1252 757213"
-                >+44 (0)1252 757213</a
-              >
+              <a
+                to="tel:+44 (0)1252 757213"
+                href="tel:+44 (0)1252 757213"
+              >+44 (0)1252 757213</a>
             </p>
 
             <div ref="cart" class="cart">
               <a href="#" class="snipcart-checkout">
                 <div class="snipcart-summary">
                   🛒
-                  <span class="snipcart-total-items" /> items
-                  <span class="snipcart-total-price" />
+                  <span class="snipcart-total-items"/> items
+                  <span class="snipcart-total-price"/>
                 </div>
               </a>
             </div>
           </div>
-          <div
-            class="column has-text-centered has-text-weight-semibold is-hidden-widescreen"
-          >
+          <!-- prettier-ignore -->
+          <div class="column has-text-centered has-text-weight-semibold is-hidden-widescreen">
             <p>
-              <a to="mailto:info@nfolio.com" href="mailto:info@nfolio.com"
-                >info@nfolio.com</a
-              >
+              <a
+                to="mailto:nick.lewis@nfolio.com"
+                href="mailto:nick.lewis@nfolio.com"
+              >nick.lewis@nfolio.com</a>
               |
-              <a to="tel:+44 (0)1252 757213" href="tel:+44 (0)1252 757213"
-                >+44 (0)1252 757213</a
-              >
+              <a
+                to="tel:+44 (0)1252 757213"
+                href="tel:+44 (0)1252 757213"
+              >+44 (0)1252 757213</a>
             </p>
 
             <div ref="cart" class="cart">
               <a href="#" class="snipcart-checkout">
                 <div class="snipcart-summary">
                   🛒
-                  <span class="snipcart-total-items" /> items
-                  <span class="snipcart-total-price" />
+                  <span class="snipcart-total-items"/> items
+                  <span class="snipcart-total-price"/>
                 </div>
               </a>
             </div>
@@ -137,15 +140,9 @@
           aria-label="main navigation"
         >
           <div class="navbar-menu is-uppercase has-text-weight-bold">
-            <router-link class="navbar-item is-hoverable" :to="'/'"
-              >Home</router-link
-            >
-            <router-link class="navbar-item is-hoverable" :to="'/category'"
-              >Categories</router-link
-            >
-            <router-link class="navbar-item is-hoverable" :to="'/vendor'"
-              >Photographers</router-link
-            >
+            <router-link class="navbar-item is-hoverable" :to="'/'">Home</router-link>
+            <router-link class="navbar-item is-hoverable" :to="'/category'">Categories</router-link>
+            <router-link class="navbar-item is-hoverable" :to="'/vendor'">Photographers</router-link>
             <!--<a class="navbar-item" href="/coupons">Coupons</a>
           <a class="navbar-item" href="/blog">Blog</a>
           <a class="navbar-item" href="/page/about">About</a>
@@ -156,11 +153,7 @@
       <div class="columns dIlvFm">
         <div class="column is-one-fifth is-hidden-mobile">
           <aside class="menu">
-            <h4
-              class="is-size-4 has-text-centered is-uppercase has-text-weight-bold"
-            >
-              Categories
-            </h4>
+            <h4 class="is-size-4 has-text-centered is-uppercase has-text-weight-bold">Categories</h4>
             <div class="sc-htpNat QGUha"></div>
             <ul class="menu-list is-centered">
               <li
@@ -168,9 +161,11 @@
                 :key="category._id"
                 class="menu-label"
               >
-                <router-link :to="'/category/' + category.slug.current">{{
+                <router-link :to="'/category/' + category.slug.current">
+                  {{
                   category.title
-                }}</router-link>
+                  }}
+                </router-link>
                 <ul v-if="category.children" class="sub-categories">
                   <li
                     v-for="subCategory in category.children"
@@ -178,8 +173,7 @@
                   >
                     <router-link
                       :to="'/category/' + subCategory.slug.current"
-                      >{{ subCategory.title }}</router-link
-                    >
+                    >{{ subCategory.title }}</router-link>
                   </li>
                 </ul>
               </li>
@@ -188,7 +182,7 @@
         </div>
 
         <!-- <section class="container"> -->
-        <nuxt />
+        <nuxt/>
         <!-- </section> -->
       </div>
       <!--<section class="section sc-bZQynM iMWVsx">
@@ -232,19 +226,12 @@
             <form class="sc-htoDjs byAGbu">
               <div class="field">
                 <div class="control">
-                  <input
-                    class="input is-shadowless"
-                    name="email"
-                    value
-                    placeholder="Your email"
-                  />
+                  <input class="input is-shadowless" name="email" value placeholder="Your email">
                 </div>
               </div>
               <div class="field">
                 <div class="control">
-                  <button type="submit" class="button is-light">
-                    Subscribe
-                  </button>
+                  <button type="submit" class="button is-light">Subscribe</button>
                 </div>
               </div>
             </form>
@@ -359,11 +346,7 @@
             </p>
           </div>
           <div class="column has-text-right is-hidden-mobile">
-            <img
-              src="/images/payment-strip.png"
-              style="height:26px"
-              alt="payments cards"
-            />
+            <img src="/images/payment-strip.png" style="height:26px" alt="payments cards">
           </div>
         </div>
       </div>
