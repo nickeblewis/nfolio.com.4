@@ -2,7 +2,7 @@
   <div class="root">
     <header>
       <router-link :to="'/'" class="logo">
-        <AppLogo />
+        <AppLogo/>
       </router-link>
       <nav>
         <ul>
@@ -15,14 +15,17 @@
           <li>
             <router-link :to="'/photographer'">Photographers</router-link>
           </li>
+          <li>
+            <router-link :to="'/contact'">Contact</router-link>
+          </li>
         </ul>
       </nav>
       <div ref="cart" class="cart">
         <a href="#" class="snipcart-checkout">
           <div class="snipcart-summary">
             🛒
-            <span class="snipcart-total-items" /> items
-            <span class="snipcart-total-price" />
+            <span class="snipcart-total-items"/> items
+            <span class="snipcart-total-price"/>
           </div>
         </a>
       </div>
@@ -35,17 +38,18 @@
           :key="category._id"
           class="category"
         >
-          <router-link :to="'/category/' + category.slug.current">{{
+          <router-link :to="'/category/' + category.slug.current">
+            {{
             category.title
-          }}</router-link>
+            }}
+          </router-link>
           <ul v-if="category.children" class="sub-categories">
-            <li
-              v-for="subCategory in category.children"
-              :key="category._id + subCategory._id"
-            >
-              <router-link :to="'/category/' + subCategory.slug.current">{{
+            <li v-for="subCategory in category.children" :key="category._id + subCategory._id">
+              <router-link :to="'/category/' + subCategory.slug.current">
+                {{
                 subCategory.title
-              }}</router-link>
+                }}
+              </router-link>
             </li>
           </ul>
         </li>
@@ -53,12 +57,10 @@
     </section>
 
     <section class="content">
-      <nuxt />
+      <nuxt/>
     </section>
 
-    <div class="footer">
-      A Sanity E-commerce example frontend in vue.js / nuxt.js
-    </div>
+    <div class="footer">A Sanity E-commerce example frontend in vue.js / nuxt.js</div>
   </div>
 </template>
 
