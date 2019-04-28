@@ -7,7 +7,7 @@
       <p>
         Thanks for dropping by our website, if you have any enquiries, please drop us a line and
         Nick will get back to you as soon as he can. Provide as much information as you can, as that
-        help us handle your request more quickly. Many thanks!
+        helps us handle your request more quickly. Many thanks!
       </p>
       <form name="contact" method="POST" data-netlify="true">
         <div class="field">
