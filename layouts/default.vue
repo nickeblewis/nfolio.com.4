@@ -141,8 +141,8 @@
         >
           <div class="navbar-menu is-uppercase has-text-weight-bold">
             <router-link class="navbar-item is-hoverable" :to="'/'">Home</router-link>
-            <router-link class="navbar-item is-hoverable" :to="'/category'">Categories</router-link>
-            <router-link class="navbar-item is-hoverable" :to="'/vendor'">Photographers</router-link>
+            <!--<router-link class="navbar-item is-hoverable" :to="'/category'">Categories</router-link>-->
+            <!-- <router-link class="navbar-item is-hoverable" :to="'/vendor'">Photographers</router-link>-->
             <router-link class="navbar-item is-hoverable" :to="'/contact'">Contact</router-link>
             <!--<a class="navbar-item" href="/coupons">Coupons</a>
           <a class="navbar-item" href="/blog">Blog</a>
