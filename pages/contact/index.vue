@@ -13,21 +13,25 @@
         <div class="field">
           <label class="label">Name</label>
           <div class="control">
-            <input class="input" type="text" placeholder="Text input">
+            <input class="input" type="text" name="name" placeholder="Your full name">
           </div>
         </div>
 
         <div class="field">
           <label class="label">Email</label>
           <div class="control">
-            <input class="input" type="text" placeholder="Text input">
+            <input class="input" type="text" name="email" placeholder="Email address">
           </div>
         </div>
 
         <div class="field">
           <label class="label">Message</label>
           <div class="control">
-            <textarea class="textarea" placeholder="Textarea"></textarea>
+            <textarea
+              class="textarea"
+              name="message"
+              placeholder="Please let us know how we can help you"
+            ></textarea>
           </div>
         </div>
 
@@ -39,7 +43,7 @@
             <button class="button is-text">Cancel</button>
           </div>
         </div>
-      </form>s
+      </form>
     </div>
   </section>
 </template>
