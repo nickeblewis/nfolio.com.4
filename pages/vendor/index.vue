@@ -35,7 +35,7 @@
 </template>
 
 <script>
-import SanityImage from '~/components/SanityImage'
+import SanityImage from "~/components/SanityImage"
 
 export default {
   components: {

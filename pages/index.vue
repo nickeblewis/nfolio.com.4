@@ -16,9 +16,9 @@
 </template>
 
 <script>
-import sanity from '~/sanity.js'
-import localize from '~/utils/localize'
-import ProductList from '~/components/ProductList'
+import sanity from "~/sanity.js"
+import localize from "~/utils/localize"
+import ProductList from "~/components/ProductList"
 
 const query = `
   {
@@ -31,7 +31,7 @@ export default {
     ProductList
   },
   asyncData() {
-    return sanity.fetch(query).then(data => localize(data, ['en', 'nb']))
+    return sanity.fetch(query).then(data => localize(data, ["en", "nb"]))
   }
 }
 </script>

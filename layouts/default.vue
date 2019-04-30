@@ -139,6 +139,24 @@
           role="navigation"
           aria-label="main navigation"
         >
+          <div class="navbar-brand">
+            <a class="navbar-item" href="https://bulma.io">
+              <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
+            </a>
+
+            <a
+              role="button"
+              class="navbar-burger burger"
+              aria-label="menu"
+              aria-expanded="false"
+              data-target="navbarBasicExample"
+            >
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+            </a>
+          </div>
+
           <div class="navbar-menu is-uppercase has-text-weight-bold">
             <router-link class="navbar-item is-hoverable" :to="'/'">Home</router-link>
             <!--<router-link class="navbar-item is-hoverable" :to="'/category'">Categories</router-link>-->
@@ -343,16 +361,16 @@ export default {
   mounted() {
     if (!window.Snipcart) {
       throw new Error(
-        'Snipcart not found. Make sure snipcart is loaded on page. For more info, see https://docs.snipcart.com/getting-started/installation'
+        "Snipcart not found. Make sure snipcart is loaded on page. For more info, see https://docs.snipcart.com/getting-started/installation"
       )
     }
     const cart = this.$refs.cart
     let timeoutId
-    window.Snipcart.subscribe('item.adding', () => {
-      cart.classList.add('pop')
+    window.Snipcart.subscribe("item.adding", () => {
+      cart.classList.add("pop")
       clearTimeout(timeoutId)
       timeoutId = setTimeout(() => {
-        cart.classList.remove('pop')
+        cart.classList.remove("pop")
       }, 220)
     })
   }
@@ -361,7 +379,7 @@ export default {
 
 <style>
 body {
-  font-family: 'Muli', sans-serif !important;
+  font-family: "Muli", sans-serif !important;
 
   color: #4a4a4a;
   font-size: 1rem;

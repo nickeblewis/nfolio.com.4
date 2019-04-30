@@ -1,4 +1,4 @@
-import sanity from '~/sanity.js'
+import sanity from "~/sanity.js"
 
 function isParentOf(category, possibleParent) {
   if (possibleParent._id === category._id) {
@@ -48,6 +48,6 @@ export default ({ store }) => {
     data.categoryTree = categories.filter(
       category => (category.parents || []).length === 0
     )
-    store.commit('globalData', data)
+    store.commit("globalData", data)
   })
 }

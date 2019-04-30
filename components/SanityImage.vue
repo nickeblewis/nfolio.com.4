@@ -4,8 +4,8 @@
 </template>
 
 <script>
-import imageUrlBuilder from '@sanity/image-url'
-import sanity from '../sanity'
+import imageUrlBuilder from "@sanity/image-url"
+import sanity from "../sanity"
 const builder = imageUrlBuilder(sanity)
 
 export default {
@@ -16,7 +16,7 @@ export default {
     },
     alt: {
       type: String,
-      default: 'Missing caption'
+      default: "Missing caption"
     },
     width: {
       default: 274,

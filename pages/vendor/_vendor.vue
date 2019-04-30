@@ -4,21 +4,20 @@
       {{ title }}
     </h4>
     <div class="sc-htpNat QGUha"></div>
-
     <div>
-      <div class="body blockContent" v-html="bodyHtml" />
+      <div class="body blockContent" />
       <ProductList v-if="products" :products="products" />
     </div>
   </section>
 </template>
 
 <script>
-import sanity from '~/sanity.js'
-import localize from '~/utils/localize'
-import blocksToHtml from '@sanity/block-content-to-html'
-import ImageViewer from '~/components/ImageViewer'
-import Price from '~/components/Price'
-import ProductList from '~/components/ProductList'
+import sanity from "~/sanity.js"
+import localize from "~/utils/localize"
+import blocksToHtml from "@sanity/block-content-to-html"
+import ImageViewer from "~/components/ImageViewer"
+import Price from "~/components/Price"
+import ProductList from "~/components/ProductList"
 
 const query = `
   *[_type == "vendor" && slug.current == $vendor] {
@@ -51,7 +50,7 @@ export default {
             projectId: sanity.clientConfig.projectId
           })
       }))
-      .then(data => localize(data, ['nb', 'en']))
+      .then(data => localize(data, ["nb", "en"]))
   }
 }
 </script>

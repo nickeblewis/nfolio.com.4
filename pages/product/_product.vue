@@ -12,7 +12,7 @@
     <div class="columns">
       <div class="column">
         <p v-if="product.blurb" class="blurb">{{ product.blurb }}</p>
-        <div class="body" v-html="bodyHtml" />
+        <div class="body" />
       </div>
       <div v-if="product.defaultProductVariant.price" class="sidebar column">
         <div class="sub-head">
@@ -65,11 +65,11 @@
 </template>
 
 <script>
-import sanity from '~/sanity.js'
-import localize from '~/utils/localize'
-import blocksToHtml from '@sanity/block-content-to-html'
-import ImageViewer from '~/components/ImageViewer'
-import numeral from 'numeral'
+import sanity from "~/sanity.js"
+import localize from "~/utils/localize"
+import blocksToHtml from "@sanity/block-content-to-html"
+import ImageViewer from "~/components/ImageViewer"
+import numeral from "numeral"
 
 const query = `
   *[_type == "product" && slug.current == $product][0] {
@@ -86,7 +86,7 @@ export default {
   },
   data: function() {
     return {
-      blurb: 'No blurb text to show',
+      blurb: "No blurb text to show",
       body: false
     }
   },
@@ -95,14 +95,14 @@ export default {
       return prefix + this.product._id
     },
     generateUrl: function() {
-      return 'https://nfolio.com/product/' + this.product.slug.current
+      return "https://nfolio.com/product/" + this.product.slug.current
     },
     formattedPrice: function() {
-      return numeral(this.product.defaultProductVariant.price).format('$0.00')
+      return numeral(this.product.defaultProductVariant.price).format("$0.00")
     },
     bodyHtml: function() {
       if (!this.product || !this.product.body) {
-        return '…'
+        return "…"
       }
       return blocksToHtml({
         blocks: this.product.body,

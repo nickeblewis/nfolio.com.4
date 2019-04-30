@@ -23,9 +23,9 @@
 </template>
 
 <script>
-import sanity from '~/sanity.js'
-import localize from '~/utils/localize'
-import ProductList from '~/components/ProductList'
+import sanity from "~/sanity.js"
+import localize from "~/utils/localize"
+import ProductList from "~/components/ProductList"
 
 const query = `
   *[_type == "category" && slug.current == $category] {
