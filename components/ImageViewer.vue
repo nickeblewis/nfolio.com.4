@@ -43,7 +43,7 @@ export default {
   data() {
     return {
       mainImageWidth: 500,
-      imageWidth: 200,
+      imageWidth: 1200,
       activeImage: null
     }
   },
@@ -62,9 +62,6 @@ export default {
 </script>
 
 <style scoped>
-.root {
-  width: 20em;
-}
 
 .mainImage {
   display: block;

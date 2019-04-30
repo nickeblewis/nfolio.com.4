@@ -80,7 +80,7 @@
               </div>
             </section>
           </div>
-          <div class="column has-text-centered">
+          <div class="column has-text-centered is-hidden-mobile">
             <a href="/">
               <img src="/nfolio.png" alt="Nfolio logo">
             </a>
@@ -135,13 +135,13 @@
           </div>
         </div>
         <nav
-          class="navbar has-background-white-ter is-hidden-mobile"
+          class="navbar has-background-white-ter"
           role="navigation"
           aria-label="main navigation"
         >
           <div class="navbar-brand">
-            <a class="navbar-item" href="https://bulma.io">
-              <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
+            <a class="navbar-item" href="/">
+              <img src="/nfolio.png" height="100%">
             </a>
 
             <a
