@@ -62,7 +62,6 @@ export default {
 </script>
 
 <style scoped>
-
 .mainImage {
   display: block;
   width: 100%;
