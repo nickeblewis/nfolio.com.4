@@ -24,7 +24,6 @@
     "cross-env": "^5.2.0",
     "numeral": "^2.0.6",
     "nuxt": "^2.8.1",
-    "nuxt-edge": "^2.7.2-25971849.7084b3a1",
     "postcss": "^6.0.22",
     "postcss-cssnext": "^3.1.0",
     "vue-line-clamp": "^1.2.3"
