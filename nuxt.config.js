@@ -62,30 +62,29 @@ export default {
   /*
    ** Customize the progress-bar color
    */
-  loading: { color: '#3B8070' },
+  loading: { color: "#3B8070" },
 
   /*
    ** Global CSS
    */
-  css: ['~/css/global.css'],
+  css: ["~/css/global.css"],
 
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ['~/plugins/globalData'],
+  plugins: ["~/plugins/globalData"],
 
   /*
    ** Nuxt.js modules
    */
   modules: [
     // Doc:https://github.com/nuxt-community/modules/tree/master/packages/bulma
-    '@nuxtjs/bulma',
-    '@nuxtjs/pwa',
-    '@nuxtjs/google-analytics'
+    "@nuxtjs/bulma",
+    "@nuxtjs/pwa"
   ],
 
   googleAnalytics: {
-    id: 'UA-58917338-2'
+    id: "UA-58917338-2"
   },
   /*
    ** Build configuration
