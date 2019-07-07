@@ -48,16 +48,6 @@
   </section>
 </template>
 
-<script>
-export default {
-  methods: {
-    track() {
-      this.$ga.page("/contact")
-    }
-  }
-}
-</script>
-
 <style scoped>
 .container-padding {
   padding: 12px;

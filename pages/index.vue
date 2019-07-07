@@ -41,11 +41,6 @@ export default {
   },
   asyncData() {
     return sanity.fetch(query).then(data => localize(data, ["en", "nb"]))
-  },
-  methods: {
-    track() {
-      this.$ga.page("/")
-    }
   }
 }
 </script>
