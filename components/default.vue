@@ -2,7 +2,7 @@
   <div class="root">
     <header>
       <router-link :to="'/'" class="logo">
-        <AppLogo/>
+        <AppLogo />
       </router-link>
       <nav>
         <ul>
@@ -24,8 +24,8 @@
         <a href="#" class="snipcart-checkout">
           <div class="snipcart-summary">
             🛒
-            <span class="snipcart-total-items"/> items
-            <span class="snipcart-total-price"/>
+            <span class="snipcart-total-items" /> items
+            <span class="snipcart-total-price" />
           </div>
         </a>
       </div>
@@ -39,16 +39,15 @@
           class="category"
         >
           <router-link :to="'/category/' + category.slug.current">
-            {{
-            category.title
-            }}
+            {{ category.title }}
           </router-link>
           <ul v-if="category.children" class="sub-categories">
-            <li v-for="subCategory in category.children" :key="category._id + subCategory._id">
+            <li
+              v-for="subCategory in category.children"
+              :key="category._id + subCategory._id"
+            >
               <router-link :to="'/category/' + subCategory.slug.current">
-                {{
-                subCategory.title
-                }}
+                {{ subCategory.title }}
               </router-link>
             </li>
           </ul>
@@ -57,15 +56,17 @@
     </section>
 
     <section class="content">
-      <nuxt/>
+      <nuxt />
     </section>
 
-    <div class="footer">A Sanity E-commerce example frontend in vue.js / nuxt.js</div>
+    <div class="footer">
+      A Sanity E-commerce example frontend in vue.js / nuxt.js
+    </div>
   </div>
 </template>
 
 <script>
-import AppLogo from '~/components/AppLogo.vue'
+import AppLogo from "~/components/AppLogo.vue"
 
 export default {
   components: {
@@ -74,16 +75,16 @@ export default {
   mounted() {
     if (!window.Snipcart) {
       throw new Error(
-        'Snipcart not found. Make sure snipcart is loaded on page. For more info, see https://docs.snipcart.com/getting-started/installation'
+        "Snipcart not found. Make sure snipcart is loaded on page. For more info, see https://docs.snipcart.com/getting-started/installation"
       )
     }
     const cart = this.$refs.cart
     let timeoutId
-    window.Snipcart.subscribe('item.adding', () => {
-      cart.classList.add('pop')
+    window.Snipcart.subscribe("item.adding", () => {
+      cart.classList.add("pop")
       clearTimeout(timeoutId)
       timeoutId = setTimeout(() => {
-        cart.classList.remove('pop')
+        cart.classList.remove("pop")
       }, 220)
     })
   }
@@ -98,9 +99,9 @@ export default {
     grid-template-columns: 10em auto;
     grid-template-rows: 5em minmax(calc(100vh - 12rem), auto) 5em;
     grid-template-areas:
-      'header   header'
-      'sidebar  content'
-      'footer   footer';
+      "header   header"
+      "sidebar  content"
+      "footer   footer";
   }
 }
 
@@ -235,8 +236,8 @@ ul.categories :global(a) {
 
 <style>
 html {
-  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 16px;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;

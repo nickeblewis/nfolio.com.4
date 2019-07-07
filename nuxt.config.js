@@ -1,5 +1,5 @@
-import pkg from './package'
-import client from './sanity.js'
+import pkg from "./package"
+import client from "./sanity.js"
 
 export default {
   // mode: 'universal',
@@ -10,51 +10,51 @@ export default {
   head: {
     title: pkg.name,
     meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: pkg.description }
+      { charset: "utf-8" },
+      { name: "viewport", content: "width=device-width, initial-scale=1" },
+      { hid: "description", name: "description", content: pkg.description }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
       {
-        href: 'https://cdn.snipcart.com/themes/2.0/base/snipcart.min.css',
-        type: 'text/css',
-        rel: 'stylesheet'
+        href: "https://cdn.snipcart.com/themes/2.0/base/snipcart.min.css",
+        type: "text/css",
+        rel: "stylesheet"
       },
       {
-        href: 'https://use.fontawesome.com/releases/v5.4.1/css/all.css',
-        type: 'text/css',
-        rel: 'stylesheet',
+        href: "https://use.fontawesome.com/releases/v5.4.1/css/all.css",
+        type: "text/css",
+        rel: "stylesheet",
         integrity:
-          'sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz',
-        crossorigin: 'anonymous'
+          "sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz",
+        crossorigin: "anonymous"
       },
       {
-        href: 'https://unpkg.com/bulma@0.7.4/css/bulma.min.css',
-        type: 'text/css',
-        rel: 'stylesheet'
+        href: "https://unpkg.com/bulma@0.7.4/css/bulma.min.css",
+        type: "text/css",
+        rel: "stylesheet"
       },
       {
         href: '"https://use.fontawesome.com/releases/v5.8.1/css/all.css"',
-        type: 'text/css',
-        rel: 'stylesheet'
+        type: "text/css",
+        rel: "stylesheet"
       }
     ],
     script: [
       {
-        src: 'https://use.fontawesome.com/releases/v5.0.7/js/all.js'
+        src: "https://use.fontawesome.com/releases/v5.0.7/js/all.js"
       },
       {
-        src: 'https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js'
+        src: "https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"
       },
       // Snipcart js
       {
-        src: 'https://cdn.snipcart.com/scripts/2.0/snipcart.js',
-        id: 'snipcart',
-        'data-autopop': 'false',
+        src: "https://cdn.snipcart.com/scripts/2.0/snipcart.js",
+        id: "snipcart",
+        "data-autopop": "false",
         // Change me. Read more at http://snipcart.com
-        'data-api-key':
-          'NTQzZDI5OGQtNzY5OC00YjcxLWI0ZjQtZTIyN2ZkOTJkNTYwNjM2MzY3MDEyNTg3MjIyMTA3'
+        "data-api-key":
+          "NTQzZDI5OGQtNzY5OC00YjcxLWI0ZjQtZTIyN2ZkOTJkNTYwNjM2MzY3MDEyNTg3MjIyMTA3"
       }
     ]
   },
@@ -62,30 +62,30 @@ export default {
   /*
    ** Customize the progress-bar color
    */
-  loading: { color: '#3B8070' },
+  loading: { color: "#3B8070" },
 
   /*
    ** Global CSS
    */
-  css: ['~/css/global.css'],
+  css: ["~/css/global.css"],
 
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ['~/plugins/globalData'],
+  plugins: ["~/plugins/globalData"],
 
   /*
    ** Nuxt.js modules
    */
   modules: [
     // Doc:https://github.com/nuxt-community/modules/tree/master/packages/bulma
-    '@nuxtjs/bulma',
-    '@nuxtjs/pwa',
-    '@nuxtjs/google-analytics'
+    "@nuxtjs/bulma",
+    "@nuxtjs/pwa",
+    "@nuxtjs/google-analytics"
   ],
 
   googleAnalytics: {
-    id: 'UA-58917338-2'
+    id: "UA-58917338-2"
   },
   /*
    ** Build configuration
@@ -105,9 +105,9 @@ export default {
       // Run ESLint on save
       if (ctx.isDev && ctx.isClient) {
         config.module.rules.push({
-          enforce: 'pre',
+          enforce: "pre",
           test: /\.(js|vue)$/,
-          loader: 'eslint-loader',
+          loader: "eslint-loader",
           exclude: /(node_modules)/
         })
       }
