@@ -12,7 +12,7 @@
     <div class="columns">
       <div class="column">
         <p v-if="product.blurb" class="blurb">{{ product.blurb }}</p>
-        <div class="body" />
+        <div class="body" v-html="bodyHtml" />
       </div>
       <div v-if="product.defaultProductVariant.price" class="sidebar column">
         <div class="sub-head">
@@ -65,11 +65,11 @@
 </template>
 
 <script>
+import blocksToHtml from "@sanity/block-content-to-html"
+import numeral from "numeral"
 import sanity from "~/sanity.js"
 import localize from "~/utils/localize"
-import blocksToHtml from "@sanity/block-content-to-html"
 import ImageViewer from "~/components/ImageViewer"
-import numeral from "numeral"
 
 const query = `
   *[_type == "product" && slug.current == $product][0] {

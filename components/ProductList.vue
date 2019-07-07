@@ -80,9 +80,9 @@
 </template>
 
 <script>
+import numeral from "numeral"
 import SanityImage from "~/components/SanityImage"
 // import lineClamp from 'vue-line-clamp'
-import numeral from "numeral"
 
 export default {
   // directives: {
