@@ -23,7 +23,7 @@
     "@sanity/image-url": "^0.128.12",
     "cross-env": "^5.2.0",
     "numeral": "^2.0.6",
-    "nuxt": "^2.8.1",
+    "nuxt": "^3.4.3",
     "postcss": "^6.0.22",
     "postcss-cssnext": "^3.1.0",
     "vue-line-clamp": "^1.2.3"
